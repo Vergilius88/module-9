@@ -112,6 +112,9 @@ html {
   color: rgb(255, 255, 255);
   font-size: 3rem;
 }
+.main-heading-span {
+  display: block;
+}
 .headline {
   font-family: "Roboto";
   font-style: normal;
@@ -122,18 +125,18 @@ html {
 .find-partner {
   color: rgb(255, 255, 255);
   background-color: rgb(255, 78, 80);
+  padding: 12px;
 }
 
 .find-partner,
 .other-partners {
-  display: block;
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
   font-size: 1.4rem;
-  margin: 0 auto;
-  border-radius: 50px;
-  padding: 12px;
+  border-radius: 20px;
+
+  max-width: 280px;
 }
 
 .partners-photo {
@@ -203,6 +206,7 @@ html {
   color: rgb(255, 78, 80);
   border: 2px solid;
   border-color: rgb(255, 78, 80);
+  padding: 10px;
 }
 .partners-name,
 .partners-about-yourself {
@@ -210,12 +214,11 @@ html {
   margin-right: auto;
   margin-left: auto;
 }
+.main-container {
+  padding-bottom: 40px;
+}
 @media (max-width: 767px) {
   .wrapper-authorization {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     padding-top: 20px;
     margin-bottom: 29px;
   }
@@ -223,28 +226,68 @@ html {
   .authorization {
     margin-bottom: 114px;
   }
-  .cards-partners {
-    margin: 0 auto;
-  }
   .cards-partners:not(:last-child) {
     margin-bottom: 26px;
   }
   .list-cards-partners {
-    margin-bottom: 26px;
+    margin-bottom: 28px;
   }
-  .find-partner,
-  .other-partners {
-    max-width: 280px;
-  }
+
   .main-heading {
-    max-width: 300px;
     letter-spacing: -1px;
-    margin: 0 auto 14px;
+    margin: 0 0 14px;
   }
   .headline {
-    max-width: 220px;
-    margin: 0 auto 15px;
+    margin-bottom: 15px;
     letter-spacing: 1px;
   }
 }
-/* @media screen and (min-width: 768px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .cards-partners:nth-child(-n + 2) {
+    margin-bottom: 28px;
+  }
+  .list-cards-partners {
+    margin-bottom: 67px;
+  }
+}
+@media (min-width: 768px) {
+  .header-backgraund {
+    padding-bottom: 230px;
+    margin-bottom: 72px;
+  }
+  .main-heading {
+    font-size: 5.2rem;
+    margin-bottom: 25px;
+    letter-spacing: -1.5px;
+    line-height: 1.2;
+  }
+  .headline {
+    margin-bottom: 33px;
+    font-size: 2.4rem;
+  }
+  .find-partner {
+    max-width: 225px;
+  }
+  .other-partners {
+    max-width: 192px;
+  }
+  .wrapper-authorization {
+    padding: 37px 0;
+    margin-bottom: 70px;
+  }
+  .subtitle {
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 992px) {
+  .list-cards-partners {
+    padding: 0 90px;
+    margin-bottom: 37px;
+  }
+  .authorization-button:hover {
+    border-color: rgb(255, 255, 255);
+  }
+  .logo {
+    text-align: center;
+  }
+}
